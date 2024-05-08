@@ -10,32 +10,32 @@ public class SignUp {
 
     @Given("User click Sign Up menu")
     public void user_click_Sign_Up_menu() throws InterruptedException {
-        click_SignUp_Navbar();
+        clickSignUpNavbar();
     }
 
     @Given("User already on Home page")
     public void user_already_on_home_page() throws InterruptedException {
-        open_Home();
+        openHome();
     }
 
     @When("User input valid username")
     public void user_input_valid_username() throws InterruptedException {
-        input_Username_SignUp();
+        inputUsernameSignUp();
     }
 
     @When("User input valid password")
     public void user_input_valid_password() throws InterruptedException {
-        input_Password_SignUp();
+        inputPasswordSignUp();
     }
 
     @When("User click on Sign up button")
     public void user_click_on_sign_up_button() throws InterruptedException {
-        click_SignUp_Button();
+        clickSignUpButton();
     }
 
     @Then("User see success sign up pop-up")
     public void user_see_success_sign_up_pop_up() throws InterruptedException {
-        validate_SignUp_Success();
-        close_Browser();
+        validateSignUpSuccess();
+        closeBrowser();
     }
 }

@@ -6,35 +6,40 @@ import io.cucumber.java.en.When;
 
 import static pages.Home.*;
 import static pages.ProductDetail.*;
+import static pages.Cart.*;
 
 public class Cart {
     @Given("User already on Cart page")
     public void user_already_on_cart_page() throws InterruptedException {
-        open_Home();
-        click_Product_One();
+        openHome();
+        clickProductOne();
         clickAddToCartButton();
-        go_To_Cart_Page();
+        goToCartPage();
     }
 
     @Given("User click on Place Order button")
-    public void user_click_on_place_order_button() {
+    public void user_click_on_place_order_button() throws InterruptedException {
+        clickPlaceOrderButton();
+    }
+
+    @When("User see Payment pop up")
+    public void user_see_payment_pop_up() throws InterruptedException {
+        verifyPaymentPopUp();
     }
 
     @When("User input valid data")
-    public void user_input_valid_data() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_input_valid_data() throws InterruptedException {
+        inputValidData();
     }
 
     @When("User click on Purchase button")
-    public void user_click_on_purchase_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_click_on_purchase_button() throws InterruptedException {
+        clickPurchaseButton();
     }
 
     @Then("User see success purchase pop-up")
-    public void user_see_success_purchase_pop_up() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_see_success_purchase_pop_up() throws InterruptedException {
+        verifySuccessPurchasePopUp();
+        closeBrowser();
     }
 }

@@ -10,8 +10,8 @@ import static pages.ProductDetail.*;
 public class ProductDetail {
     @Given("User already on Product Detail page")
     public void user_already_on_product_detail_page() throws InterruptedException {
-        open_Home();
-        click_Product_One();
+        openHome();
+        clickProductOne();
     }
 
     @When("User click on Add to cart button")
@@ -22,7 +22,7 @@ public class ProductDetail {
     @Then("Product is added into the cart")
     public void product_is_added_into_the_cart() throws InterruptedException {
         verifyProductAddedToCart();
-        close_Browser();
+        closeBrowser();
 
     }
 }
